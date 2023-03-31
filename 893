@@ -113,13 +113,14 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
---- Кнопка переключатель
-Tab:AddToggle({
+--- Кнопка Бинд
+Tab:AddBind({
 	Name = "ReJoin Server",
-	Default = false,
-	Callback = function(F10) local placeId = 2202352383
+	Default = Enum.KeyCode.F10,
+	Hold = false,
+	Callback = function() local placeId = 2202352383
 	game:GetService("TeleportService"):Teleport(placeId)
-		print(Value)
+		print("press")
 	end    
 })
 
