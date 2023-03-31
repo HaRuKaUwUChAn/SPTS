@@ -49,18 +49,77 @@ Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
 
---- Меню таб1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- Меню таб0
+
 local Tab = Window:MakeTab({
 	Name = "Settings",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
---- Кнопка
-Tab:AddButton({
+--- Кнопка переключатель
+Tab:AddToggle({
 	Name = "ReJoin Server",
-	Callback = function() local placeId = 2202352383
+	Default = false,
+	Callback = function(F10) local placeId = 2202352383
 	game:GetService("TeleportService"):Teleport(placeId)
-      		print("button pressed")
-  	end    
+		print(Value)
+	end    
 })
+
